@@ -16,8 +16,7 @@ $(document).ready(function(){
 
 	$('.inner_sqr').hover(function(){
 	
-		$(this).fadeOut(100);
-		$(this).fadeIn(500);
+		$(this).css("background-color","#666");
 	
 	});
 });
