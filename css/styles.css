@@ -1,6 +1,6 @@
 .inner_sqr {
 
-	background-color: orange;
+	border: 1px solid #666;
 	margin: 1px 1px 0 0;
 	display: inline-block;
 }
