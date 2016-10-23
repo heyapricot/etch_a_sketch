@@ -19,4 +19,11 @@ $(document).ready(function(){
 		$(this).css("background-color","#666");
 	
 	});
+
+	//Clear button
+	$('#clear').click(function(){
+
+		$('.inner_sqr').css('background-color','white');
+
+	});
 });
