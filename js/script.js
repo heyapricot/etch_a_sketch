@@ -5,6 +5,14 @@ $(document).ready(function(){
 	$('#container').width(cntnr_width);
 	$('#container').height(cntnr_width);
 
+	$('#container').css({
+		'position' : 'absolute',
+		'left' : '50%',
+		'top' : '50%',
+		'margin-left' : -$('#container').outerWidth()/2,
+		'margin-top' : -$('#container').outerHeight()/2
+	});
+
 	//Clear button
 	$('#clear').click(function(){
 
@@ -33,7 +41,7 @@ function grid(cntnr_width){
 
 	$('.inner_sqr').hover(function(){
 		colors = "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + ")";
-		$(this).css("background-color", "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + ")");
+		$(this).css("background-color", colors);
 	
 	});
 
