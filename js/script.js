@@ -13,6 +13,13 @@ $(document).ready(function(){
 		'margin-top' : -$('#container').outerHeight()/2
 	});
 
+	$('#commands').css({
+
+		'position' : 'absolute',
+		'left' : '50%',
+		'margin-left' : - $('#commands').outerWidth()/2
+	});
+
 	//Clear button
 	$('#clear').click(function(){
 
