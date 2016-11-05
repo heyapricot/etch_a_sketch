@@ -29,6 +29,28 @@ $(document).ready(function(){
 	});
 
 	grid(cntnr_width);
+	
+	$('.inner_sqr').hover(function(){
+		$(this).css("background-color", 'rgb(212,30,87)');
+	});
+
+	$('input:radio[name="style"]').change(function(){
+		if ($(this).val() == 'rainbow') {
+			
+			$('.inner_sqr').hover(function(){
+				colors = "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + ")";
+				$(this).css("background-color", colors);
+			});
+
+		}
+
+		else {
+			$('.inner_sqr').hover(function(){
+				$(this).css("background-color", 'rgb(212,30,87)');
+			});
+		}
+	});
+	
 
 });
 
@@ -45,12 +67,7 @@ function grid(cntnr_width){
 	for (i = (sqr_qty * sqr_qty); i > 0 ; i --) {
 		$('#container').append($div);
 	}	
-
-	$('.inner_sqr').hover(function(){
-		colors = "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255) + ")";
-		$(this).css("background-color", colors);
 	
-	});
-
-
 }
+
+
